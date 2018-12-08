@@ -1,8 +1,11 @@
 /*
  * PilleStat V1.0 - 2018
  * Designed and code by  Kim Andreasen
+ * andreasen70@gmail.com
  */
-  const unsigned int Modul_ID = 1000;                         // PilleStat Modul ID
+  const unsigned int Modul_ID = 2001;                         // PilleStat Modul ID - Send en mail til mig, og du kan få dit eget id-nummer for logge data på min server.
+                                                              // Der kommer kodeord på meget snart!
+
   const unsigned long BAUD_RATE = 115200;                     // Set BR på Serial porten
   const float lux_faktor = 0.062591687;                       // 4090 = 0 lux, 0 = 255 lux.
   const int TonePin = 6;                                      // Pin til Buzzer.
@@ -41,7 +44,7 @@
 
   const char serverName[] = "www.pillestat.eu";               // Link til PilleStat Web adresse
   const int serverPort = 80;                                  // Web Server's port #
-  const char pageName[] = "/modtag_data.php";                 // Siden som data skal sendes til
+  const char pageName[] = "/***********.php";                 // Siden som data skal sendes til - Fås når du får har fået dit ID nummer.
   EthernetClient client;                                      // Starter ETH klienten  
   EthernetUDP Udp;
   #define UDP_TX_PACKET_MAX_SIZE 41                           // Ændre Size så den er plads til alt i Telegrammet
